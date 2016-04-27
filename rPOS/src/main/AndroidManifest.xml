@@ -27,7 +27,7 @@
     <!-- <uses-feature android:name="android.hardware.camera.any"/> -->
     <uses-feature android:name="android.hardware.camera.autofocus" android:required="false"/>
     <uses-feature android:name="android.hardware.camera.flash" android:required="false"/>
-    <uses-feature android:name="android.hardware.screen.landscape" android:required="false"/>
+    <!--<uses-feature android:name="android.hardware.screen.landscape" android:required="false"/>-->
     <uses-feature android:name="android.hardware.wifi" android:required="false"/>
     <!-- This excludes Google TV, which is unfortunately included by virtue of not requiring a camera -->
     <uses-feature android:name="android.hardware.touchscreen"/>
@@ -41,7 +41,6 @@
 
     <application
         android:name=".A"
-        android:debuggable="false"
         android:allowBackup="true"
         android:icon="@drawable/ic_launcher"
         android:label="@string/app_name"
@@ -49,6 +48,8 @@
         <activity
             android:name=".MainActivity"
             android:label="@string/title_activity_main"
+            android:configChanges="orientation"
+            android:screenOrientation="portrait"
             android:clearTaskOnLaunch="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -61,6 +62,7 @@
             android:clearTaskOnLaunch="true"
             android:stateNotNeeded="true"
             android:configChanges="orientation|keyboardHidden|screenSize"
+            android:screenOrientation="portrait"
             android:theme="@android:style/Theme.NoTitleBar.Fullscreen"
             android:windowSoftInputMode="stateAlwaysHidden">
             <intent-filter>
@@ -71,17 +73,20 @@
         <activity
             android:name=".PrefsActivity"
             android:label="@string/title_activity_prefs"
-            android:configChanges="orientation">
+            android:configChanges="orientation"
+            android:screenOrientation="portrait">
         </activity>
         <activity
             android:name=".CustomerActivity"
             android:label="@string/title_activity_customer"
-            android:configChanges="orientation">
+            android:configChanges="orientation"
+            android:screenOrientation="portrait">
         </activity>
         <activity
             android:name=".TxActivity"
             android:label="@string/title_activity_tx"
-            android:configChanges="orientation">
+            android:configChanges="orientation"
+            android:screenOrientation="portrait">
         </activity>
         <activity
             android:name=".DescriptionActivity"
@@ -96,12 +101,14 @@
         <activity
             android:name=".PhotoIdActivity"
             android:label="@string/title_activity_photo_id"
-            android:configChanges="orientation">
+            android:configChanges="orientation"
+            android:screenOrientation="portrait">
         </activity>
         <activity
             android:name=".IdNumberActivity"
             android:label="@string/title_activity_id_number"
-            android:configChanges="orientation">
+            android:configChanges="orientation"
+            android:screenOrientation="portrait">
         </activity>
     </application>
 

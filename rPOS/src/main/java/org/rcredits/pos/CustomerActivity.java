@@ -61,7 +61,6 @@ public class CustomerActivity extends Act {
         }
         setLayout();
     }
-
     /**
      * Adjust the layout according to the device's orientation.
      * @param newConfig

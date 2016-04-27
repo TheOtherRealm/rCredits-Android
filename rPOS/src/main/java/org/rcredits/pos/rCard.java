@@ -1,7 +1,7 @@
 package org.rcredits.pos;
 
 /**
- * Hold the information gleaned from scanning an rCard.
+ * Hold the information gleamed from scanning an rCard.
  */
 public class rCard {
     public String region; // the account's region code (usually the first 3 characters of the account ID)
