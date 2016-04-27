@@ -4,7 +4,6 @@
     android:versionCode="214"
     android:versionName="2.14">
     <!-- Do NOT use android:installLocation="auto" or ="preferExternal"! which can result in data loss -->
-
     <uses-sdk
         android:minSdkVersion="7"
         android:targetSdkVersion="10" />
