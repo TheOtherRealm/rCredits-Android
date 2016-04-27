@@ -58,7 +58,7 @@ public final class AppPickerActivity extends ListActivity {
     if (position >= 0 && position < adapter.getCount()) {
       String packageName = ((AppInfo) adapter.getItem(position)).getPackageName();
       Intent intent = new Intent();
-      intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_WHEN_TASK_RESET);
+      intent.addFlags(Intent.FLAG_ACTIVITY_NEW_DOCUMENT);
       intent.putExtra(Browser.BookmarkColumns.URL, "market://details?id=" + packageName);
       setResult(RESULT_OK, intent);
     } else {
